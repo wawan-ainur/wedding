@@ -227,10 +227,10 @@ gtag("config", "UA-156593040-1", {"anonymize_ip":true});
                                             <div class="wdp-mempelai" >Wawan &amp; Ainur
                                             </div>
 
-                                                                                                                    <div class="wdp-dear" >Kpd Bpk/Ibu/Saudara/i</div>
-                                                                        <div class="wdp-name"></div>
+                                      <div class="wdp-dear" >Kpd Bpk/Ibu/Saudara/i</div>
+                                                                        <div class="wdp-name" id="wdp-name" style="text-transform: capitalize;"></div>
                                                                                     <div class="wdp-text" >Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Menghadiri Acara Pernikahan Kami.</div>
-                                                                                                                <div class="wdp-button-wrapper" id="wdp-button-wrapper">
+                                                                             <div class="wdp-button-wrapper" id="wdp-button-wrapper">
                                         <button class="elementor-button">
                                                                                         <span >
                                                                                           </span>
@@ -257,6 +257,18 @@ gtag("config", "UA-156593040-1", {"anonymize_ip":true});
             z.addEventListener("click", function(event) {
                 document.getElementById("song").play();
             });
+
+            function getParameterByName(name, url = window.location.href) {
+						    name = name.replace(/[\[\]]/g, '\\$&');
+						    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+						        results = regex.exec(url);
+						    if (!results) return null;
+						    if (!results[2]) return '';
+						    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+						}
+						var to = getParameterByName('to');
+						to = to.replace(/-/g, " ");
+						document.getElementById("wdp-name").innerHTML = to;
         </script>
         		</div>
 				</div>
